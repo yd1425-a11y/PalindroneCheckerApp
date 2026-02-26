@@ -1,20 +1,24 @@
-public class PalindromeCheckerApp {
+import java.util.Stack;
+
+public class PalindromeCheckerApp{
     public static void PalindromeCheckerApp(String[] args) {
         String str = "madam";
-        char[] arr = str.toCharArray();
-        boolean isPalindrome = true;
+        Stack<Character> stack = new Stack<>();
 
-        for (int i = 0; i < arr.length / 2; i++) {
-            if (arr[i] != arr[arr.length - 1 - i]) {
-                isPalindrome = false;
-                break;
-            }
+        for (char c : str.toCharArray()) {
+            stack.push(c);
         }
 
-        if (isPalindrome) {
+        String rev = "";
+        while (!stack.isEmpty()) {
+            rev += stack.pop();
+        }
+
+        if (str.equals(rev)) {
             System.out.println("Palindrome");
         } else {
             System.out.println("Not Palindrome");
         }
     }
 }
+
