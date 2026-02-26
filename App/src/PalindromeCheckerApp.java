@@ -1,4 +1,4 @@
-public class PalindromeCheckerApp {
+public class Main {
 
     static boolean isPalindrome(String str, int start, int end) {
         if (start >= end)
