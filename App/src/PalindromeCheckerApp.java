@@ -3,17 +3,15 @@ import java.util.*;
 public class PalindromeCheckerApp {
     public static void PalindromeCheckerApp(String[] args) {
         String str = "madam";
-        Stack<Character> stack = new Stack<>();
-        Queue<Character> queue = new LinkedList<>();
+        Deque<Character> deque = new LinkedList<>();
         boolean isPalindrome = true;
 
         for (char c : str.toCharArray()) {
-            stack.push(c);
-            queue.add(c);
+            deque.add(c);
         }
 
-        while (!stack.isEmpty()) {
-            if (!stack.pop().equals(queue.remove())) {
+        while (deque.size() > 1) {
+            if (!deque.removeFirst().equals(deque.removeLast())) {
                 isPalindrome = false;
                 break;
             }
