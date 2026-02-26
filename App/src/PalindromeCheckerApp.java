@@ -1,6 +1,16 @@
 public class PalindromeCheckerApp {
-    public static void main(String[] args){
-        System.out.println("Hello World");
-        System.out.println("this is use case 2");
+    public static void PalindromeCheckerApp(String[] args) {
+        String str = "level";
+        String rev = "";
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev += str.charAt(i);
+        }
+
+        if (str.equals(rev)) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not Palindrome");
+        }
     }
 }
