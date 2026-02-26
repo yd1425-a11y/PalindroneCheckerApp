@@ -8,7 +8,7 @@ class Node {
 }
 
 public class PalindromeCheckerApp {
-    public static void main(String[] args) {
+    public static void PalindromeCheckerApp(String[] args) {
         String str = "madam";
         Node head = null, temp = null;
 
