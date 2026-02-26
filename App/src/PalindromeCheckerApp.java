@@ -1,13 +1,17 @@
 public class PalindromeCheckerApp {
     public static void PalindromeCheckerApp(String[] args) {
-        String str = "level";
-        String rev = "";
+        String str = "madam";
+        char[] arr = str.toCharArray();
+        boolean isPalindrome = true;
 
-        for (int i = str.length() - 1; i >= 0; i--) {
-            rev += str.charAt(i);
+        for (int i = 0; i < arr.length / 2; i++) {
+            if (arr[i] != arr[arr.length - 1 - i]) {
+                isPalindrome = false;
+                break;
+            }
         }
 
-        if (str.equals(rev)) {
+        if (isPalindrome) {
             System.out.println("Palindrome");
         } else {
             System.out.println("Not Palindrome");
